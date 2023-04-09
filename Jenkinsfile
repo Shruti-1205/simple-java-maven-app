@@ -3,14 +3,15 @@ pipeline {
 
     tools {
         maven 'Maven 3.8.3'
-        jdk '11'
+        jdk 'JDK 11'
     }
 
     stages {
-        stage('Build') { 
+        stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn -B -DskipTests clean package'
             }
         }
     }
 }
+
