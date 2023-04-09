@@ -1,10 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.0-eclipse-temurin-11' 
-            args '-v /root/.m2:/root/.m2' 
-        }
+    agent any
+
+    tools {
+        maven 'Maven 3.8.3'
+        jdk '11'
     }
+
     stages {
         stage('Build') { 
             steps {
